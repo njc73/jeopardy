@@ -3,6 +3,7 @@ hi thomas
 i didnt feel like sending a bunch of updated files and stuff so i put everything in a github repository
 
 things you need to have installed (all via pip)
+!!! i recommend setting up a virtual envionment (https://docs.python.org/3/library/venv.html) but you don't Have to
 |____ matplotlib
 |____ pandas
 |____ numpy
