@@ -14,7 +14,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 print("determining optimal k value...")
 
-model = SentenceTransformer('all-MiniLM-L6-v2') 
+model = SentenceTransformer("all-MiniLM-L6-v2") 
 
 #this bit gets the categories from csv
 j = pd.read_csv("JEOPARDY_CSV.csv")
@@ -36,13 +36,13 @@ for k in ks:
     kmeans.fit(embeddings)
     inertias.append(kmeans.inertia_)
 
-knee = KneeLocator(ks, inertias, curve='convex', direction='decreasing')
+knee = KneeLocator(ks, inertias, curve="convex", direction="decreasing")
 
 plt.figure(figsize=(8, 6))
-plt.plot(ks, inertias, marker = 'o', color = 'pink', linestyle = '--')
-plt.title('elbow :D')
-plt.xlabel('N_clusters (k)')
-plt.ylabel('Inertia')
+plt.plot(ks, inertias, marker = "o", color = "pink", linestyle = "--")
+plt.title("elbow :D")
+plt.xlabel("N_clusters (k)")
+plt.ylabel("Inertia")
 plt.xticks(ks)
 plt.grid(True)
 
