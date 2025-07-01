@@ -13,9 +13,10 @@ things you need to have installed (all via pip)
 |____ tf-keras
 
 - elbow.py gives optimal k (# clusters)
-- jeopardy.py uses optimal k from elbow.py (46) and splits data.tsv into k clusters, exporting each into a new (or existing) folder called "clusters"
+- jeopardy.py splits JEOPARDY_CSV.csv into 8, 16, 32, 64, and 128 clusters
+- subcat.py splits history.txt into 8 subclusters
+    ! i'd like to modify jeopardy.py to automatically output each cluster to a text file in a folder ... watch this space
+- gooey.py is ugly af but lets you search data.tsv by category
     - data.tsv is a cleaned version of combined_season1-39.tsv
-- subcat.py splits history.txt (example file, you can change the path and use a new txt file from clusters/) into 8 subclusters
-- gooey.py lets you search data.tsv by category
 
-feel free to contribute :P
+feel free to contribute :P# jeopardy
